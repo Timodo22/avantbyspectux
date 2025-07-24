@@ -1,0 +1,149 @@
+.elementor-5681 .elementor-element.elementor-element-94322dd {
+    --display: flex;
+    --min-height: 350px;
+    --flex-direction: row;
+    --container-widget-width: initial;
+    --container-widget-height: 100%;
+    --container-widget-flex-grow: 1;
+    --container-widget-align-self: stretch;
+    --flex-wrap-mobile: wrap;
+    --gap: 0px 0px;
+    --row-gap: 0px;
+    --column-gap: 0px;
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+    --padding-left: 0px;
+    --padding-right: 0px;
+}
+
+.elementor-5681 .elementor-element.elementor-element-64c2fcb {
+    --display: flex;
+    --flex-direction: column;
+    --container-widget-width: 100%;
+    --container-widget-height: initial;
+    --container-widget-flex-grow: 0;
+    --container-widget-align-self: initial;
+    --flex-wrap-mobile: wrap;
+    --justify-content: center;
+    --padding-top: 20px;
+    --padding-bottom: 20px;
+    --padding-left: 20px;
+    --padding-right: 20px;
+}
+
+.elementor-5681 .elementor-element.elementor-element-3d6036b .elementor-heading-title {
+    font-size: 22px;
+}
+
+.elementor-5681 .elementor-element.elementor-element-e3b16cf .jet-form-builder__label {
+    text-align: left;
+}
+
+.elementor-5681 .elementor-element.elementor-element-e3b16cf .jet-form-builder__desc {
+    text-align: left;
+}
+
+.elementor-5681 .elementor-element.elementor-element-e3b16cf .jet-form-builder__fields-group {
+    gap: 0.7em 0.7em;
+}
+
+.elementor-5681 .elementor-element.elementor-element-e3b16cf .jet-form-builder__field-wrap.checkradio-wrap span {
+    gap: 8px;
+}
+
+.elementor-5681 .elementor-element.elementor-element-e3b16cf .jet-form-builder__field:not(.checkradio-field):not(.range-field):not(.jet-form-builder-repeater):not(.wysiwyg-field) {
+    padding: 10px 10px 10px 10px;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #000000;
+    border-radius: 0px 0px 0px 0px;
+}
+
+.elementor-5681 .elementor-element.elementor-element-e3b16cf .jet-form-builder input {
+    color-scheme: normal;
+}
+
+.elementor-5681 .elementor-element.elementor-element-e3b16cf .jet-form-builder-repeater__row-remove {
+    align-self: flex-start;
+}
+
+.elementor-5681 .elementor-element.elementor-element-e3b16cf .jet-form-builder__action-button {
+    background-color: var( --e-global-color-primary);
+    transition: all 0.3s;
+    border-style: none;
+}
+
+.elementor-5681 .elementor-element.elementor-element-e3b16cf .jet-form-builder__submit-wrap {
+    justify-content: stretch;
+    align-items: stretch;
+}
+
+.elementor-5681 .elementor-element.elementor-element-e3b16cf .jet-form-builder__submit-wrap>.jet-form-builder__submit {
+    width: 100%;
+}
+
+.elementor-5681 .elementor-element.elementor-element-e3b16cf .jet-form-builder__submit {
+    justify-content: center;
+}
+
+.elementor-5681 .elementor-element.elementor-element-e3b16cf .jet-form-builder__next-page-wrap {
+    text-align: left;
+}
+
+.elementor-5681 .elementor-element.elementor-element-e3b16cf .jet-form-builder-message--success {
+    text-align: center;
+}
+
+.elementor-5681 .elementor-element.elementor-element-e3b16cf .jet-form-builder-message--error {
+    text-align: center;
+}
+
+.elementor-5681 .elementor-element.elementor-element-9cd830d {
+    --display: flex;
+    --flex-direction: column;
+    --container-widget-width: 100%;
+    --container-widget-height: initial;
+    --container-widget-flex-grow: 0;
+    --container-widget-align-self: initial;
+    --flex-wrap-mobile: wrap;
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+    --padding-left: 0px;
+    --padding-right: 0px;
+}
+
+.elementor-5681 .elementor-element.elementor-element-9cd830d:not(.elementor-motion-effects-element-type-background),
+.elementor-5681 .elementor-element.elementor-element-9cd830d>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+    background-image: url("https://daskoerier.nl/wp-content/uploads/2025/01/Perfect_Binding_Brochure_Mockup_5-kopie.png");
+    background-position: center center;
+    background-size: cover;
+}
+
+#jet-popup-5681 .jet-popup__container {
+    width: 800px;
+}
+
+#jet-popup-5681 .jet-popup__inner {
+    justify-content: center;
+    align-items: center;
+}
+
+#jet-popup-5681 .jet-popup__container-inner {
+    justify-content: flex-start;
+    padding: 0px 0px 0px 0px;
+}
+
+@media(max-width:767px) {
+    .elementor-5681 .elementor-element.elementor-element-9cd830d {
+        --min-height: 250px;
+    }
+}
+
+@media(min-width:768px) {
+    .elementor-5681 .elementor-element.elementor-element-64c2fcb {
+        --width: 50%;
+    }
+    .elementor-5681 .elementor-element.elementor-element-9cd830d {
+        --width: 50%;
+    }
+}
