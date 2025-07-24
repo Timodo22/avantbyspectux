@@ -2443,17 +2443,26 @@
 
         <hr>
 
-        <div class="avant-fields-row">
-            <input type="text" name="ophaaladres" id="ophaaladres" placeholder="Ophaaladres*" required />
-            <input type="text" name="afleveradres" id="afleveradres" placeholder="Afleveradres*" required />
-        </div>
+<div class="avant-fields-row">
+    <div style="flex:1;display:flex;flex-direction:column;gap:7px;">
+        <input type="text" name="ophaal_bedrijfsnaam" id="ophaal_bedrijfsnaam" placeholder="Bedrijfsnaam ophaalpunt" />
+        <input type="text" name="ophaaladres" id="ophaaladres" placeholder="Ophaaladres*" required />
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:7px;">
+        <input type="text" name="aflever_bedrijfsnaam" id="aflever_bedrijfsnaam" placeholder="Bedrijfsnaam afleverpunt" />
+        <input type="text" name="afleveradres" id="afleveradres" placeholder="Afleveradres*" required />
+    </div>
+</div>
+
+
         <div class="avant-fields-row">
             <input type="text" name="product" id="product" placeholder="Product*" required />
             <select name="soort_pallet" id="soort_pallet" required>
                 <option value="">Soort pallet*</option>
                 <option value="Europallet">Europallet</option>
                 <option value="Blokpallet">Blokpallet</option>
-                <option value="Displaypallet">Displaypallet</option>
+                <option value="Wegwerppallet">Wegwerppallet</option>
+                                <option value="Halve-pallet">Halve pallet</option>
                 <option value="Anders">Anders</option>
             </select>
         </div>
