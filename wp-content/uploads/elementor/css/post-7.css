@@ -125,7 +125,7 @@
 
 .elementor-7 .elementor-element.elementor-element-8f93f59:not(.elementor-motion-effects-element-type-background),
 .elementor-7 .elementor-element.elementor-element-8f93f59>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-    background-image: url("https://daskoerier.nl/wp-content/uploads/2024/12/HS_08969-min.jpg");
+    background-image: url('/wp-content/uploads/Spectux/Avant3.jpg');
     background-size: cover;
 }
 
@@ -208,9 +208,11 @@
 
 .elementor-7 .elementor-element.elementor-element-449cec6:not(.elementor-motion-effects-element-type-background),
 .elementor-7 .elementor-element.elementor-element-449cec6>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-    background-image: url("https://daskoerier.nl/wp-content/uploads/2024/12/HS_08890-min.jpg");
-    background-size: cover;
+    background-image: url('/wp-content/uploads/Spectux/ADR.jpg');
+    background-size: 120%;
+    background-position: center 60%; /* Voeg deze regel toe */
 }
+
 
 .elementor-7 .elementor-element.elementor-element-449cec6::before,
 .elementor-7 .elementor-element.elementor-element-449cec6>.elementor-background-video-container::before,
@@ -291,8 +293,9 @@
 
 .elementor-7 .elementor-element.elementor-element-ccc9e29:not(.elementor-motion-effects-element-type-background),
 .elementor-7 .elementor-element.elementor-element-ccc9e29>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-    background-image: url("https://daskoerier.nl/wp-content/uploads/2024/11/HS_09076-min.jpg");
+    background-image: url("/wp-content/uploads/Spectux/Avant1.jpg");
     background-size: cover;
+    background-position: center 60%;
 }
 
 .elementor-7 .elementor-element.elementor-element-ccc9e29::before,
