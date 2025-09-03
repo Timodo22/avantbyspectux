@@ -2374,6 +2374,64 @@
     </div>
     </div>
     </header>
+
+<script>
+    // JavaScript oplossing voor dynamische video sizing op mobiel
+function adjustMobileVideo() {
+    const video = document.querySelector('.elementor-background-video-hosted');
+    const container = document.querySelector('.elementor-background-video-container');
+    
+    if (!video || !container) return;
+    
+    // Check if we're on a mobile device
+    const isMobile = window.innerWidth <= 768;
+    
+    if (isMobile) {
+        const containerWidth = container.offsetWidth;
+        const containerHeight = container.offsetHeight;
+        const containerRatio = containerWidth / containerHeight;
+        
+        // Krijg video dimensions (je moet dit aanpassen naar je video's werkelijke ratio)
+        const videoRatio = 16 / 9; // Bijvoorbeeld voor 1920x1080 video
+        
+        if (containerRatio > videoRatio) {
+            // Container is breder dan video ratio - fit op breedte
+            video.style.width = '100%';
+            video.style.height = 'auto';
+            video.style.minHeight = '100%';
+        } else {
+            // Container is hoger dan video ratio - fit op hoogte
+            video.style.height = '100%';
+            video.style.width = 'auto';
+            video.style.minWidth = '100%';
+        }
+        
+        // Centreer de video
+        video.style.position = 'absolute';
+        video.style.top = '50%';
+        video.style.left = '50%';
+        video.style.transform = 'translate(-50%, -50%)';
+        video.style.objectFit = 'cover';
+    }
+}
+
+// Run on page load
+document.addEventListener('DOMContentLoaded', adjustMobileVideo);
+
+// Run on window resize
+window.addEventListener('resize', adjustMobileVideo);
+
+// Run when video metadata is loaded (voor correcte dimensions)
+document.addEventListener('DOMContentLoaded', function() {
+    const video = document.querySelector('.elementor-background-video-hosted');
+    if (video) {
+        video.addEventListener('loadedmetadata', adjustMobileVideo);
+    }
+});
+</script>
+    <style>
+        
+    </style>
     <!-- #masthead -->
     <div id="content" class="site-content ">
         <div data-elementor-type="wp-page" data-elementor-id="7" class="elementor elementor-7" data-elementor-post-type="page">
@@ -2381,8 +2439,8 @@
                 <div class="e-con-inner">
                     <div class="elementor-background-video-container">
                         <video class="elementor-background-video-hosted" autoplay muted playsinline loop>
-  <source src="/wp-content/uploads/Spectux/Avant_clip.mp4" type="video/mp4">
-</video>
+                        <source src="/wp-content/uploads/Spectux/Avant_clip.mp4" type="video/mp4">
+                        </video>
 
                     </div>
                     <div class="elementor-element elementor-element-7f101c6 elementor-widget elementor-widget-heading" data-id="7f101c6" data-element_type="widget" data-widget_type="heading.default">
@@ -2799,7 +2857,7 @@
     <!-- #content -->
 
     <footer style="background:#293250; color:#fff; padding: 40px 0 10px 0; font-family: Roboto, sans-serif; margin-top: 20px;">
-    <div style="max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; justify-content:space-between; gap:40px;">
+    <div style="max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; justify-content:space-between; gap:40px; padding-left: 20px;">
         <!-- Logo + tagline -->
         <div style="flex:1 1 250px;">
             <img src="wp-content/uploads/Spectux/Avant_logo_white.png" alt="Daskoerier logo" style="max-width:180px; margin-bottom:18px;">
