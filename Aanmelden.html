@@ -2421,18 +2421,22 @@
 <form id="avant-order-form" action="https://api.web3forms.com/submit" method="POST" novalidate class="avant-order-form">
     <!-- Web3Forms access key -->
     <input type="hidden" name="access_key" value="cc2543f4-446b-4a4f-bce6-1be469df595f" />
-    <!-- Ordernummer subject (wordt via JS ingevuld!) -->
-    <input type="hidden" name="subject" id="subject" value="" />
-    <input type="hidden" name="ordernummer" id="ordernummer" value="" />
+    <!-- Subject (wordt via JS ingevuld!) -->
+    <input type="hidden" name="subject" id="subject" value="Nieuwe transport order aanmelding" />
     <!-- Honeypot -->
     <input type="checkbox" name="botcheck" style="display:none !important" tabindex="-1" autocomplete="off">
 
     <div class="avant-form-header">
         <h2>Transport Order Aanmelden</h2>
-        <div id="ordernummer-view" class="ordernummer-box"></div>
     </div>
     
     <div class="avant-form-fields">
+        <!-- Referentie -->
+        <div class="section-header">Order Referentie</div>
+        <div class="avant-fields-row">
+            <input type="text" name="ref_nummer" id="ref_nummer" placeholder="Uw referentienummer*" required />
+        </div>
+        
         <!-- Contact Informatie -->
         <div class="section-header">Contact Informatie</div>
         <div class="avant-fields-row">
@@ -2538,18 +2542,6 @@
     font-weight: 700;
     color: #1d3557;
     margin: 0 0 0 0;
-}
-
-.ordernummer-box {
-    background: #fff;
-    color: #2563eb;
-    border: 1.5px dashed #3b82f6;
-    font-size: 1.18em;
-    padding: 5px 22px;
-    border-radius: 12px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    margin-bottom: 2px;
 }
 
 .section-header {
@@ -2693,21 +2685,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById('avant-order-form');
     const msg = document.getElementById('form-msg');
-    const subjectField = document.getElementById('subject');
-    const ordernummerField = document.getElementById('ordernummer');
-    const ordernummerView = document.getElementById('ordernummer-view');
     const RATE_LIMIT_KEY = "avant_last_order_time";
-
-    // Genereer 6-cijferig ordernummer
-    function generateOrdernummer() {
-        return Math.floor(100000 + Math.random() * 900000).toString();
-    }
-
-    // Zet ordernummer bij laden
-    let ordernummer = generateOrdernummer();
-    ordernummerField.value = ordernummer;
-    subjectField.value = "Nieuwe transport order #" + ordernummer;
-    ordernummerView.textContent = "Ref: OSW" + ordernummer;
 
     // Validatie helper
     function checkFields() {
@@ -2768,7 +2746,7 @@ document.addEventListener("DOMContentLoaded", function () {
 TRANSPORT ORDER DETAILS
 ======================
 
-Ref: OSW${ordernummer}
+Ref: ${data.ref_nummer}
 
 Pick up: ${data.ophaal_bedrijfsnaam || 'Naam niet opgegeven'}
 ${data.ophaaladres}
@@ -2818,6 +2796,10 @@ ${data.bedrijfsnaam ? 'Company: ' + data.bedrijfsnaam : ''}
         msg.textContent = "Verzenden...";
         const formData = new FormData(form);
         
+        // Update subject met referentienummer
+        const refNummer = formData.get('ref_nummer');
+        formData.set('subject', `Nieuwe transport order - Ref: ${refNummer}`);
+        
         // Voeg gestructureerde bericht toe
         const structuredOrder = formatOrderData(formData);
         formData.append('structured_order', structuredOrder);
@@ -2829,16 +2811,11 @@ ${data.bedrijfsnaam ? 'Company: ' + data.bedrijfsnaam : ''}
         .then(response => response.json())
         .then(data => {
             if(data.success){
-                msg.textContent = "Bedankt! Uw transport order is succesvol aangemeld. Referentie: OSW" + ordernummer;
+                msg.textContent = `Bedankt! Uw transport order is succesvol aangemeld. Referentie: ${refNummer}`;
                 msg.classList.remove('error');
                 msg.classList.add('success');
                 localStorage.setItem(RATE_LIMIT_KEY, Date.now().toString());
                 form.reset();
-                // Genereer nieuwe ordernummer voor een volgende inzending (na 10min)
-                ordernummer = generateOrdernummer();
-                ordernummerField.value = ordernummer;
-                subjectField.value = "Nieuwe transport order #" + ordernummer;
-                ordernummerView.textContent = "Ref: OSW" + ordernummer;
             } else {
                 msg.textContent = "Er ging iets mis. Probeer het later opnieuw.";
                 msg.classList.remove('success');
