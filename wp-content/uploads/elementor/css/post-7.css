@@ -324,6 +324,65 @@
     box-shadow: 0px 0px 18px 3px rgba(0, 0, 0, 0.5);
 }
 
+
+
+/* Dit is een comment */
+
+.elementor-7 .elementor-element.elementor-element-ccc9e291 {
+    --display: flex;
+    --min-height: 200px;
+    --justify-content: flex-end;
+    --align-items: center;
+    --container-widget-width: calc( ( 1 - var( --container-widget-flex-grow)) * 100%);
+    --overlay-opacity: 0.5;
+    --padding-top: 0px;
+    --padding-bottom: 15px;
+    --padding-left: 0px;
+    --padding-right: 0px;
+}
+
+.elementor-7 .elementor-element.elementor-element-ccc9e291:not(.elementor-motion-effects-element-type-background),
+.elementor-7 .elementor-element.elementor-element-ccc9e291>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+    background-image: url("/wp-content/uploads/Spectux/Loods.jpg");
+    background-size: cover;
+    background-position: center 60%;
+}
+
+.elementor-7 .elementor-element.elementor-element-ccc9e291::before,
+.elementor-7 .elementor-element.elementor-element-ccc9e291>.elementor-background-video-container::before,
+.elementor-7 .elementor-element.elementor-element-ccc9e291>.e-con-inner>.elementor-background-video-container::before,
+.elementor-7 .elementor-element.elementor-element-ccc9e291>.elementor-background-slideshow::before,
+.elementor-7 .elementor-element.elementor-element-ccc9e291>.e-con-inner>.elementor-background-slideshow::before,
+.elementor-7 .elementor-element.elementor-element-ccc9e291>.elementor-motion-effects-container>.elementor-motion-effects-layer::before {
+    background-color: transparent;
+    --background-overlay: '';
+    background-image: linear-gradient(180deg, var( --e-global-color-primary) 0%, #000000 100%);
+}
+
+.elementor-7 .elementor-element.elementor-element-ccc9e291:hover::before,
+.elementor-7 .elementor-element.elementor-element-ccc9e291:hover>.elementor-background-video-container::before,
+.elementor-7 .elementor-element.elementor-element-ccc9e291:hover>.e-con-inner>.elementor-background-video-container::before,
+.elementor-7 .elementor-element.elementor-element-ccc9e291>.elementor-background-slideshow:hover::before,
+.elementor-7 .elementor-element.elementor-element-ccc9e291>.e-con-inner>.elementor-background-slideshow:hover::before {
+    background-color: transparent;
+    --background-overlay: '';
+    background-image: linear-gradient(180deg, var( --e-global-color-primary) 0%, #000000 100%);
+}
+
+.elementor-7 .elementor-element.elementor-element-ccc9e291:hover {
+    --overlay-opacity: 0.3;
+    box-shadow: 0px 0px 18px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* Dit is een comment */
+
+
+
+
+
+
 .elementor-7 .elementor-element.elementor-element-36a03f4 {
     width: var( --container-widget-width, 80%);
     max-width: 80%;
@@ -691,6 +750,9 @@ body:not(.rtl) .elementor-7 .elementor-element.elementor-element-8e04d45 .elemen
         --width: 250px;
     }
     .elementor-7 .elementor-element.elementor-element-ccc9e29 {
+        --width: 250px;
+    }
+    .elementor-7 .elementor-element.elementor-element-ccc9e291 {
         --width: 250px;
     }
     .elementor-7 .elementor-element.elementor-element-73f36a7 {
